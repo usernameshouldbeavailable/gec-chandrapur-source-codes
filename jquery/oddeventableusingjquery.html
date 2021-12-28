@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even Table with jQuery</title>
+    <!-- <style>
+        .red {
+            background-color: red;
+        }
+    </style> -->
+</head>
+
+<body>
+    <h1>Odd Even Table with jQuery</h1>
+    <table border="2px">
+        <tr id="tHeader">
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('document').ready(function () {
+
+            // jQuery
+            $('tr:odd').css('background', 'yellow');
+            $('tr:even').css('background', 'green');
+            $('#tHeader').css('color', 'white');
+
+        });
+    </script>
+</body>
+
+</html>
