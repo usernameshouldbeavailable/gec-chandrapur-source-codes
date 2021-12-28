@@ -10,16 +10,27 @@
     <h1>jQuery Input Event</h1>
     <p><label for="">Enter Mobile Number</label></p>
     <p><input type="text" id="mobileNumber"/></p>
+    <p id="feedback"></p>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $('document').ready(function(){
 
             $('#mobileNumber').focus(function() {
-                $('#mobileNumber').css('background', 'blue');
+                $('#mobileNumber').css('background', 'grey');
+                $('#feedback').text('Please Enter Mobile Number');
+                $('#feedback').css('color', 'grey');
             });
 
             $('#mobileNumber').blur(function() {
-                $('#mobileNumber').css('background', 'red');
+                if($('#mobileNumber').val().length != 10) {
+                    $('#feedback').text('Invalid Mobile Number');
+                    $('#feedback').css('color', 'red');
+                    $('#mobileNumber').css('background', 'red');
+                } else {
+                    $('#feedback').text('Valid Mobile Number');
+                    $('#feedback').css('color', 'green');
+                    $('#mobileNumber').css('background', 'green');
+                }
             });
 
         });
