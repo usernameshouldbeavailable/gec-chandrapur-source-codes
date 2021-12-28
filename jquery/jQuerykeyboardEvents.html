@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Keyboard Event</title>
+</head>
+<body>
+    <h1>jQuery Keyboard Event</h1>
+    <p><label for="">Enter your name</label></p>
+    <p><input type="text" id="name"/></p>
+    <p id="feedbackKeyUp"></p>
+    <p id="feedbackKeyDown"></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('document').ready(function(){
+
+            $('#name').keyup(function() {
+
+                let personName = $('#name').val();
+
+                $('#feedbackKeyUp').text("Hey " + personName + "! How are you doing today? This is Key Up");
+
+            });
+
+            $('#name').keydown(function(){
+
+                let personName = $('#name').val();
+
+                $('#feedbackKeyDown').text("Hey " + personName + "! How are you doing today? This is Key Down");
+
+            });
+
+
+        });
+    </script>
+</body>
+</html>
