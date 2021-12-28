@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Input Event</title>
+</head>
+<body>
+    <h1>jQuery Input Event</h1>
+    <p><label for="">Enter Mobile Number</label></p>
+    <p><input type="text" id="mobileNumber"/></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('document').ready(function(){
+
+            $('#mobileNumber').focus(function() {
+                $('#mobileNumber').css('background', 'blue');
+            });
+
+            $('#mobileNumber').blur(function() {
+                $('#mobileNumber').css('background', 'red');
+            });
+
+        });
+    </script>
+</body>
+</html>
