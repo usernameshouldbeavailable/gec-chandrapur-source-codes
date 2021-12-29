@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide or Show</title>
+    <style>
+        #cookieBanner {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Fade In and Fade Out</h1>
+    <p id="cookieBanner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, qui. Aliquid delectus aliquam ullam eveniet hic blanditiis id quam, facilis cum perferendis debitis, consectetur sed quidem ratione, adipisci magnam beatae?</p>
+    <p><button id="fadeInBtn">Click here for Fade In</button></p>
+    <p><button id="fadeOutBtn">Click here for Fade Out</button></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('document').ready(function(){
+
+            $('#fadeInBtn').click(function(){
+                $('#cookieBanner').fadeIn();
+            });
+
+            $('#fadeOutBtn').click(function(){
+                $('#cookieBanner').fadeOut();
+            });
+
+        });
+    </script>
+</body>
+</html>
