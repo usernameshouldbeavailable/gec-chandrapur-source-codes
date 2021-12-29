@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide or Show</title>
+</head>
+<body>
+    <h1>jQuery Hide or Show</h1>
+    <p id="cookieBanner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, qui. Aliquid delectus aliquam ullam eveniet hic blanditiis id quam, facilis cum perferendis debitis, consectetur sed quidem ratione, adipisci magnam beatae?</p>
+    <p><button id="showCookieBannerBtn">Show Cookie Banner</button> <button id="hideCookieBannerBtn">Hide Cookie Banner</button></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('document').ready(function(){
+
+            $('#hideCookieBannerBtn').click(function(){
+                $('#cookieBanner').hide();
+            });
+
+            $('#showCookieBannerBtn').click(function() {
+                $('#cookieBanner').show();
+            });
+
+        });
+    </script>
+</body>
+</html>
