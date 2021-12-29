@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Append and Prepend</title>
+</head>
+<body>
+    <h1>jQuery Append and Prepend</h1>
+    <h3>My To List</h3>
+    <ol id="myTodoList">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ol>
+    <p><input type="text" id="itemField"> <button id="addToLastBtn">Add To Last</button> <button id="addToTopBtn">Add to Top</button></button></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('document').ready(function(){
+
+
+            $('#addToLastBtn').click(function() {
+
+                let itemValue = $('#itemField').val();
+
+                $('#myTodoList').append('<li>' + itemValue + '</li>');
+
+            });
+
+            $('#addToTopBtn').click(function() {
+
+                let itemValue = $('#itemField').val();
+
+                $('#myTodoList').prepend('<li>' + itemValue + '</li>');
+
+            });
+
+        });
+    </script>
+</body>
+</html>
